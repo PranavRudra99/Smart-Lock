@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#03A9F4</color>
+    <color name="colorPrimaryDark">#2196F3</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="text_smart_lock">#BEB5B5</color>
+    <color name="button_text_color">#30D97F</color>
+    <color name="sign_in_color">#4DF9F9</color>
+    <color name="lock_text_color">#23E2BB</color>
+    <color name="log_button_color">#09769F</color>
+    <color name="log_text_color">#0FDF69</color>
+    <color name="try_again">#4285F4</color>
+</resources>
