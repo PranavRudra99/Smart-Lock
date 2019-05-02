@@ -5,8 +5,8 @@
 #include "FirebaseArduino.h"
 #define FIREBASE_HOST "project-85a2a.firebaseio.com"
 #define FIREBASE_AUTH "ZCo27yFFWGtJoRVa67pdX6nM8LXUGMC6l0Xk519S"
-const char* ssid = "NETGEAR82";
-const char* password = "waterypond850";
+const char* ssid = "A";
+const char* password = "12345678";
 int address = 0;
 int pin = 12;//D6
 int addr = 10;
@@ -128,16 +128,20 @@ void onLED(){
 }
 void lock()
 {
+  String path = "/USERS/"+mailId+"/lock-unlock";
   String message = {"lock"};
   server.send(200, "text/plain", message);
+  Firebase.setInt(path,1);
   Serial.println(message);
   digitalWrite(BUILTIN_LED, LOW);
   digitalWrite(pin, LOW); 
 }
 void unlock()
 {
-    String message = {"unlock"};
+  String path = "/USERS/"+mailId+"/lock-unlock";
+  String message = {"unlock"};
   server.send(200, "text/plain", message);
+  Firebase.setInt(path,0);
   Serial.println(message);
   digitalWrite(BUILTIN_LED, HIGH); 
   digitalWrite(pin, HIGH);
